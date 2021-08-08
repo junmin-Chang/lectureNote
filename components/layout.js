@@ -18,8 +18,8 @@ export default function Layout({ children, home }) {
                         <Image
                             priority
                             src="/images/me.jpg"
-                            height={144}
-                            width={144}
+                            height={130}
+                            width={130}
                             alt={name}
                             className={utilStyles.borderCircle}
                         />
@@ -33,17 +33,12 @@ export default function Layout({ children, home }) {
                                     priority
                                     className={utilStyles.borderCircle}
                                     src="/images/me.jpg"
-                                    height={144}
-                                    width={144}
+                                    height={130}
+                                    width={130}
                                     alt={name}
                                 />
                             </a>
                         </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
-                                <a className={utilStyles.colorInherit}>Back</a>
-                            </Link>
-                        </h2>
                     </>
                 )}
             </header>
