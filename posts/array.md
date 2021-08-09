@@ -28,7 +28,7 @@ std::array<int, 4> arr2 = {1,2,3,4};
 std::cout << "arr2의 모든 원소: ";
 
 for (int i = 0; i < arr2.size(); i++) {
-    std::cout << arr2[i] >> " ";
+    std::cout << arr2[i] << " ";
 } 
 std::cout << std::endl;
 
