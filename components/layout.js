@@ -4,6 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/util.module.css'
 import Link from 'next/link'
 import Category from "./category";
+import SideBar from "./navbar";
 
 const name = "장준민"
 export const siteTitle = "장준민의 자료구조, 알고리즘 노트"
@@ -14,6 +15,8 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header className={styles.header}>
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+
                 {home ? (
                     <>
                         <Image

@@ -19,6 +19,7 @@ export default function Home({ allPostData }) {
 
 
   return (
+
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
