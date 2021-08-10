@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/util.module.css'
 import Link from 'next/link'
+import Category from "./category";
 
 const name = "장준민"
 export const siteTitle = "장준민의 자료구조, 알고리즘 노트"
@@ -44,6 +45,7 @@ export default function Layout({ children, home }) {
             </header>
             <div>
                 <h3>Category</h3>
+                <Category/>
             </div>
             <main>{children}</main>
             {!home && (

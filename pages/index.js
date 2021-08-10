@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Layout from "../components/layout";
 import {siteTitle} from "../components/layout";
@@ -9,6 +8,7 @@ import {getSortedPostsData} from "../lib/posts";
 
 export async function getStaticProps() {
     const allPostData = getSortedPostsData()
+
     return {
         props: {
             allPostData
@@ -16,6 +16,8 @@ export async function getStaticProps() {
     }
 }
 export default function Home({ allPostData }) {
+
+
   return (
     <Layout home>
       <Head>
@@ -28,6 +30,7 @@ export default function Home({ allPostData }) {
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
                 {allPostData.map(({ id, date, title }) => (
+
                   <li key={id}>
                       <Link href={`posts/${id}`}>
                           <a>{title}</a>

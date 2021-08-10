@@ -1,6 +1,7 @@
 ---
 title: '자료구조 개요'
 date: '2021-08-08'
+tag: 'data-structure'
 ---
 # 자료구조 개요
 
