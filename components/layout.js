@@ -25,6 +25,7 @@ export default function Layout({ children, home }) {
                             className={utilStyles.borderCircle}
                         />
                         <h1 className={utilStyles.heading2Xl}>{name}의 자료구조 및 알고리즘</h1>
+
                     </>
                 ) : (
                     <>

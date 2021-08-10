@@ -24,9 +24,6 @@ export default function Home({ allPostData }) {
         <title>{siteTitle}</title>
       </Head>
 
-        <section>
-            <p>자료구조와 알고리즘 정리 노트</p>
-        </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
                 {allPostData.map(({ id, date, title }) => (

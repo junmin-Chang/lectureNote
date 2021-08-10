@@ -1,0 +1,12 @@
+.categoryWrapper {
+    margin-bottom: 1rem;
+}
+
+.category {
+    background-color: #832cd4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}

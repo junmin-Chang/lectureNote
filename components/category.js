@@ -1,19 +1,19 @@
 import React from 'react'
 import Link from "next/link";
+import categoryStyles from './category.module.css'
 
 export default function Category() {
     return (
         <>
-            <div>
+            <div className={categoryStyles.categoryWrapper}>
                 <Link href="/posts/algorithms">
-                    <a>Algorithms</a>
+                    <a className={categoryStyles.category}>Algorithms</a>
                 </Link>
-            </div>
-            <div>
                 <Link href="/posts/data-structure">
-                    <a>자료구조</a>
+                    <a className={categoryStyles.category}>자료구조</a>
                 </Link>
             </div>
+            <hr/>
         </>
 
     )
