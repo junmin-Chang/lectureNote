@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from "../../components/date";
 import CodeBlock from "../../components/codeblock";
 import ReactMarkdown from "react-markdown";
+import Comment from "../../components/comments";
 import utilStyles from '../../styles/util.module.css'
 
 export default function Post({ postData }) {
@@ -19,6 +20,7 @@ export default function Post({ postData }) {
                 </div>
                 <ReactMarkdown components={CodeBlock}>{postData.markdown}</ReactMarkdown>
             </article>
+            <Comment/>
         </Layout>
     )
 }
