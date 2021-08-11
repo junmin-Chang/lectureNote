@@ -1,6 +1,6 @@
 ---
 title: '스택(Stack)'
-date: '2021-08-011'
+date: '2021-08-11'
 tag: 'data-structure'
 ---
 
