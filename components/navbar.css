@@ -44,12 +44,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-    border-right: 5px solid #390b68;
-    border-top-right-radius: 16px;
-    background: #626879;
+    background: #373a47;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
 }
+
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
@@ -66,6 +65,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item {
     display: inline-block;
     color: white;
+}
+
+.bm-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.bm-item:hover::after {
+    width: 100%;
+    transition: width .3s;
 }
 
 /* Styling of overlay */
