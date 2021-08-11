@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import {siteTitle} from "../components/layout";
 import utilStyles from '../styles/util.module.css'
 import Date from "../components/date";
+import { useState } from 'react'
 import {getSortedPostsData} from "../lib/posts";
 
 export async function getStaticProps() {
@@ -16,11 +17,14 @@ export async function getStaticProps() {
     }
 }
 export default function Home({ allPostData }) {
-
+    const [postCount, setPostCount] = useState({
+        algo: allPostData.filter(({ tag }) => tag === "algorithms").length,
+        dataStructure: allPostData.filter(({ tag }) => tag === "data-structure").length
+    })
 
   return (
 
-    <Layout home>
+    <Layout home algo={postCount.algo} dataStructure={postCount.dataStructure}>
       <Head>
         <title>{siteTitle}</title>
       </Head>

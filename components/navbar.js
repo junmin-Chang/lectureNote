@@ -4,18 +4,13 @@ import Link from 'next/link'
 
 export default function SideBar(props) {
 
-
-    const [count, setCount] = useState({
-        algoCount: 0,
-        dataCount: 0
-    })
     return (
         // Pass on our props
         <Menu {...props}>
             <div>
                 <Link href="/posts/algorithms">
                     <a>
-                        {`알고리즘(${count.algoCount})`}
+                        {`알고리즘(${props.algo})`}
                     </a>
 
                 </Link>
@@ -23,7 +18,7 @@ export default function SideBar(props) {
             <div>
                 <Link href="/posts/data-structure">
                     <a>
-                        {`자료구조(${count.dataCount})`}
+                        {`자료구조(${props.dataStructure})`}
                     </a>
                 </Link>
             </div>

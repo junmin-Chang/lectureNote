@@ -7,14 +7,14 @@ import SideBar from "./navbar";
 
 const name = "장준민"
 export const siteTitle = "Jungorithms"
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, algo, dataStructure }) {
     return (
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header className={styles.header}>
-                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} algo={algo} dataStructure={dataStructure}/>
 
                 {home ? (
                     <>
