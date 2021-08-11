@@ -3,7 +3,6 @@ title: 'std::array'
 date: '2021-08-09'
 tag: 'algorithms'
 ---
-# std::array
 
 ---
 

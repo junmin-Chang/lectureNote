@@ -3,11 +3,10 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/util.module.css'
 import Link from 'next/link'
-import Category from "./category";
 import SideBar from "./navbar";
 
 const name = "장준민"
-export const siteTitle = "장준민의 자료구조, 알고리즘 노트"
+export const siteTitle = "Jungorithms"
 export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
@@ -47,10 +46,8 @@ export default function Layout({ children, home }) {
                     </>
                 )}
             </header>
-            <div>
-                <h3>Category</h3>
-                <Category/>
-            </div>
+
+            <hr/>
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
