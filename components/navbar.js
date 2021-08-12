@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { bubble as Menu } from "react-burger-menu";
 import Link from 'next/link'
-import Search from "./search";
 export default function SideBar(props) {
 
     return (
@@ -22,7 +21,6 @@ export default function SideBar(props) {
                     </a>
                 </Link>
             </div>
-            <Search/>
 
         </Menu>
     );
