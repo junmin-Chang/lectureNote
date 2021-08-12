@@ -2,6 +2,7 @@ import React from 'react'
 import {getSortedPostsData} from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import Head from 'next/head'
 import Layout from "../components/layout";
 import utilStyles from '../styles/util.module.css'
 export async function getStaticProps() {
@@ -15,25 +16,31 @@ export async function getStaticProps() {
 }
 export default function Algorithms({ posts }) {
     return (
-        <Layout>
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <ul className={utilStyles.list}>
+        <>
+            <Head>
+                <title>Jungorithm | 알고리즘 목록</title>
+            </Head>
+            <Layout>
+                <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+                    <ul className={utilStyles.list}>
 
-                {posts.filter(({ tag }) => tag === "algorithms")
-                .map(({ title, id, date }) => (
-                        <li key={id}>
-                            <Link href={`/posts/${id}`}>
-                                <a>{title}</a>
-                            </Link>
-                            <br/>
-                            <small>
-                                <Date dateString={date}/>
-                            </small>
-                        </li>
-                ))
-            }
-                </ul>
-            </section>
-        </Layout>
+                        {posts.filter(({ tag }) => tag === "algorithms")
+                            .map(({ title, id, date }) => (
+                                <li key={id}>
+                                    <Link href={`/posts/${id}`}>
+                                        <a>{title}</a>
+                                    </Link>
+                                    <br/>
+                                    <small>
+                                        <Date dateString={date}/>
+                                    </small>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </section>
+            </Layout>
+        </>
+
     )
 }

@@ -4,7 +4,7 @@ date: '2021-08-11'
 tag: 'data-structure'
 ---
 
-#스택이란?
+# 스택이란?
 > 말의 의미를 한번 생각해보자. Stack 즉 무더기로 쌓여있는 것이다. 이미지를 한번 보자.
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/300px-Data_stack.svg.png)

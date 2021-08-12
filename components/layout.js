@@ -7,6 +7,7 @@ import SideBar from "./navbar";
 import Search from "./search";
 const name = "장준민"
 export const siteTitle = "Jungorithms"
+
 export default function Layout({ children, home, algo, dataStructure }) {
     return (
         <div className={styles.container}>
@@ -26,8 +27,8 @@ export default function Layout({ children, home, algo, dataStructure }) {
                             alt={name}
                             className={utilStyles.borderCircle}
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}의 자료구조 및 알고리즘</h1>
 
+                        <h1 className={utilStyles.heading2Xl}>{name}의 자료구조 및 알고리즘</h1>
                     </>
                 ) : (
                     <>

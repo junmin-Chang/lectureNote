@@ -1,16 +1,20 @@
 .container {
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .search {
     box-sizing: border-box;
+    border-radius: 1rem;
+    border: none;
     outline: none;
     font-size: 18px;
     padding: 18px;
-    width: 100%;
+    width: 500px;
 }
 
 .results {
+
     list-style: none;
     overflow: hidden;
     margin: 9px 0 0;
@@ -23,6 +27,7 @@
 }
 
 .result {
+    border-radius: 1rem;
     background: #4004a7;
     color: #eee;
     margin: 0 0 9px;
