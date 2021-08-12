@@ -4,7 +4,6 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/util.module.css'
 import Link from 'next/link'
 import SideBar from "./navbar";
-
 const name = "장준민"
 export const siteTitle = "Jungorithms"
 export default function Layout({ children, home, algo, dataStructure }) {
@@ -15,7 +14,6 @@ export default function Layout({ children, home, algo, dataStructure }) {
             </Head>
             <header className={styles.header}>
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} algo={algo} dataStructure={dataStructure}/>
-
                 {home ? (
                     <>
                         <Image

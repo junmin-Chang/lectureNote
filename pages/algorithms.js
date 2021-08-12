@@ -1,9 +1,9 @@
 import React from 'react'
-import {getSortedPostsData} from "../../lib/posts";
+import {getSortedPostsData} from "../lib/posts";
 import Link from "next/link";
-import Date from "../../components/date";
-import Layout from "../../components/layout";
-import utilStyles from '../../styles/util.module.css'
+import Date from "../components/date";
+import Layout from "../components/layout";
+import utilStyles from '../styles/util.module.css'
 export async function getStaticProps() {
     const posts = getSortedPostsData()
 
