@@ -8,10 +8,16 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm cache-posts && git add cache/data.js"
+    }
+  },
   "dependencies": {
     "date-fns": "^2.23.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
+    "husky": "^7.0.1",
     "matter": "^0.2.0",
     "next": "11.0.1",
     "react": "17.0.2",
