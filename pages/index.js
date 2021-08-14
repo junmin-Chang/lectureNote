@@ -31,7 +31,7 @@ export default function Home({ allPostData }) {
 
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
-                {allPostData.map(({ id, date, title, tag, image }) => (
+                {allPostData.map(({ id, date, title, tag }) => (
 
                   <li key={id} style={{
                       backgroundColor: '#262222',
@@ -39,35 +39,20 @@ export default function Home({ allPostData }) {
                       padding: '1rem',
                       borderRadius: '1rem'
                   }}>
-                      { tag === "algorithms" ?
+
                           <div style={{
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center'
                           }}>
                               <Image
-                                  src={image}
+                                  src={`/images/${id}.png`}
                                   width={339}
                                   height={130}
                                   priority
                                   alt={tag}
                               />
                           </div>
-                          :
-                          <div style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center'
-                          }}>
-                              <Image
-                                  src={image}
-                                  width={339}
-                                  height={130}
-                                  priority
-                                  alt={tag}
-                              />
-                          </div>
-                      }
                       <Link href={`posts/${id}`}>
                           <a>{title}</a>
                       </Link>

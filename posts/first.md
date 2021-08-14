@@ -2,7 +2,6 @@
 title: '연속된 자료 구조와 연결된 자료구조'
 date: '2021-08-08'
 tag: 'data-structure'
-image: '/public/images/linked.png'
 ---
 
 ---
