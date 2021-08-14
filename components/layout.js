@@ -6,6 +6,8 @@ import Link from 'next/link'
 import SideBar from "./navbar";
 import Search from "./search";
 const name = "장준민"
+import { AiOutlineMail } from "react-icons/ai";
+
 export const siteTitle = "Jungorithms"
 
 export default function Layout({ children, home, algo, dataStructure }) {
@@ -27,6 +29,14 @@ export default function Layout({ children, home, algo, dataStructure }) {
                             alt={name}
                             className={utilStyles.borderCircle}
                         />
+                        <a href="mailto:chjm219@kookmin.ac.kr">
+                            <AiOutlineMail
+                            style={{
+                                fontSize: '2rem',
+                                color: 'white'
+                            }}
+                            />
+                        </a>
 
                         <h1 className={utilStyles.heading2Xl}>{name}의 자료구조 및 알고리즘</h1>
                     </>
