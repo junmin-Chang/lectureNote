@@ -11,7 +11,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run cache-posts && git add cache/data.js"
+      "pre-commit": "yarn cache-posts && git add cache/data.js"
     }
   },
   "dependencies": {
