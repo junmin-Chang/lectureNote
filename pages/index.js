@@ -6,7 +6,7 @@ import utilStyles from '../styles/util.module.css'
 import Date from "../components/date";
 import { useState } from 'react'
 import {getSortedPostsData} from "../lib/posts";
-
+import Image from 'next/image'
 export async function getStaticProps() {
     const allPostData = getSortedPostsData()
 
@@ -31,9 +31,43 @@ export default function Home({ allPostData }) {
 
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
-                {allPostData.map(({ id, date, title }) => (
+                {allPostData.map(({ id, date, title, tag, image }) => (
 
-                  <li key={id}>
+                  <li key={id} style={{
+                      backgroundColor: '#262222',
+                      marginTop: '1rem',
+                      padding: '1rem',
+                      borderRadius: '1rem'
+                  }}>
+                      { tag === "algorithms" ?
+                          <div style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center'
+                          }}>
+                              <Image
+                                  src={image}
+                                  width={339}
+                                  height={130}
+                                  priority
+                                  alt={tag}
+                              />
+                          </div>
+                          :
+                          <div style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center'
+                          }}>
+                              <Image
+                                  src={image}
+                                  width={339}
+                                  height={130}
+                                  priority
+                                  alt={tag}
+                              />
+                          </div>
+                      }
                       <Link href={`posts/${id}`}>
                           <a>{title}</a>
                       </Link>
@@ -42,7 +76,6 @@ export default function Home({ allPostData }) {
                           <Date dateString={date}/>
                       </small>
                   </li>
-
                 ))}
             </ul>
         </section>

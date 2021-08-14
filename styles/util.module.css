@@ -84,6 +84,11 @@
     line-height: 1.5;
 }
 
+.thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .borderCircle {
     border-radius: 9999px;
 }
@@ -103,6 +108,7 @@
 }
 
 .listItem {
+    background-color: white;
     margin: 0 0 1.25rem;
 }
 
