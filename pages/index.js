@@ -33,13 +33,14 @@ export default function Home({ allPostData }) {
             <ul className={utilStyles.list}>
                 {allPostData.map(({ id, date, title, tag }) => (
 
-                  <li key={id} style={{
+                    <Link href={`/posts/${id}`} key={id}>
+                        <a>
+                        <li style={{
                       backgroundColor: '#262222',
                       marginTop: '1rem',
                       padding: '1rem',
                       borderRadius: '1rem'
                   }}>
-
                           <div style={{
                               display: 'flex',
                               alignItems: 'center',
@@ -53,14 +54,13 @@ export default function Home({ allPostData }) {
                                   alt={tag}
                               />
                           </div>
-                      <Link href={`posts/${id}`}>
-                          <a>{title}</a>
-                      </Link>
-                      <br/>
-                      <small>
-                          <Date dateString={date}/>
-                      </small>
-                  </li>
+                            <h3>{title}</h3>
+                                <small className={utilStyles.date}>
+                                    <Date dateString={date}/>
+                                </small>
+                            </li>
+                        </a>
+                    </Link>
                 ))}
             </ul>
         </section>
