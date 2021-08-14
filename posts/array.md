@@ -2,7 +2,7 @@
 title: 'std::array'
 date: '2021-08-09'
 tag: 'algorithms'
-image: '/../public/images/array.png'
+image: '/public/images/array.png'
 ---
 
 ---

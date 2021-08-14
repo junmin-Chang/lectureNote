@@ -2,7 +2,7 @@
 title: '스택(Stack)'
 date: '2021-08-11'
 tag: 'data-structure'
-image: '/../public/images/stack1.png'
+image: '/public/images/stack1.png'
 
 ---
 
