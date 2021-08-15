@@ -5,6 +5,7 @@ import utilStyles from '../styles/util.module.css'
 import Link from "next/link";
 import Head from 'next/head'
 import Date from "../components/date";
+import PostBlock from "../components/postblock";
 export async function getStaticProps() {
     const posts = getSortedPostsData()
 
@@ -24,16 +25,8 @@ export default function DataStructure({ posts }) {
                 <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                     <ul className={utilStyles.list}>
                         {posts.filter(({ tag }) => tag === "data-structure")
-                            .map(({ id, title, date }) => (
-                                <li key={id}>
-                                    <Link href={`/posts/${id}`}>
-                                        <a>{title}</a>
-                                    </Link>
-                                    <br/>
-                                    <small>
-                                        <Date dateString={date}/>
-                                    </small>
-                                </li>
+                            .map(({ id, title, date, tag }) => (
+                                <PostBlock date={date} id={id} title={title} tag={tag} key={id}/>
                             ))
                         }
                     </ul>

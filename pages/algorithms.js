@@ -4,6 +4,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import Head from 'next/head'
 import Layout from "../components/layout";
+import PostBlock from "../components/postblock";
 import utilStyles from '../styles/util.module.css'
 export async function getStaticProps() {
     const posts = getSortedPostsData()
@@ -25,16 +26,8 @@ export default function Algorithms({ posts }) {
                     <ul className={utilStyles.list}>
 
                         {posts.filter(({ tag }) => tag === "algorithms")
-                            .map(({ title, id, date }) => (
-                                <li key={id}>
-                                    <Link href={`/posts/${id}`}>
-                                        <a>{title}</a>
-                                    </Link>
-                                    <br/>
-                                    <small>
-                                        <Date dateString={date}/>
-                                    </small>
-                                </li>
+                            .map(({ title, id, date, tag }) => (
+                                <PostBlock date={date} title={title} id={id} tag={tag} key={id}/>
                             ))
                         }
                     </ul>

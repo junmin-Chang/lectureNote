@@ -7,6 +7,7 @@ import Date from "../components/date";
 import { useState } from 'react'
 import {getSortedPostsData} from "../lib/posts";
 import Image from 'next/image'
+import PostBlock from "../components/postblock";
 export async function getStaticProps() {
     const allPostData = getSortedPostsData()
 
@@ -32,35 +33,7 @@ export default function Home({ allPostData }) {
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
                 {allPostData.map(({ id, date, title, tag }) => (
-
-                    <Link href={`/posts/${id}`} key={id}>
-                        <a>
-                        <li style={{
-                      backgroundColor: '#262222',
-                      marginTop: '1rem',
-                      padding: '1rem',
-                      borderRadius: '1rem'
-                  }}>
-                          <div style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center'
-                          }}>
-                              <Image
-                                  src={`/images/${id}.png`}
-                                  width={339}
-                                  height={130}
-                                  priority
-                                  alt={tag}
-                              />
-                          </div>
-                            <h3>{title}</h3>
-                                <small className={utilStyles.date}>
-                                    <Date dateString={date}/>
-                                </small>
-                            </li>
-                        </a>
-                    </Link>
+                   <PostBlock id={id} date={date} title={title} tag={tag} key={id}/>
                 ))}
             </ul>
         </section>

@@ -120,3 +120,16 @@
 .date {
     color: white;
 }
+
+.imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postItemList {
+    background-color: #262222;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
