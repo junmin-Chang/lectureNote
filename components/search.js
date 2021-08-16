@@ -25,10 +25,7 @@ export default function Search() {
         }
     }, [])
 
-    const onFocus = useCallback(() => {
-        setActive(true)
-        window.addEventListener('click', onClick)
-    }, [])
+
 
     const onClick = useCallback((event) => {
         if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -36,6 +33,10 @@ export default function Search() {
             window.removeEventListener('click', onClick)
         }
     }, [])
+    const onFocus = useCallback(() => {
+        setActive(true)
+        window.addEventListener('click', onClick)
+    }, [onClick])
 
     return (
         <div ref={searchRef} className={styles.container}>

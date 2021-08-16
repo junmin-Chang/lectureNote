@@ -1,5 +1,6 @@
 import {getSortedPostsData} from "../../lib/posts";
 const posts = process.env.NODE_ENV === 'production' ? require('../../cache/data').posts : getSortedPostsData()
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (req, res) => {
     const results = req.query.q ?
         posts.filter(post => post.title.toLowerCase().includes(req.query.q)) : []
