@@ -4,7 +4,7 @@ date: '2021-08-16'
 tag: 'data-structure'
 ---
 
-#개요
+# 개요
 > 더블 링크드 리스트는 링크드 리스트의 탐색 기능을 개선한 자료구조입니다.
 > 기존 링크드 리스트는 헤드부터 시작하여 테일까지 훑어가면서 탐색을 진행했지만
 > >더블 링크드 리스트는 양방향으로 탐색을 할 수 있다는 것입니다.
@@ -132,7 +132,7 @@ void DLL_InsertAfter(Node* Current, Node* NewNode) {
 ```
 
 ## 노드 개수 세기
-> SLL과 동일함
+> SLL 과 동일함
 
 ```c
 int DLL_GetNodeCount(Node* Head) {
