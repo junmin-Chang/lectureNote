@@ -19,8 +19,6 @@ export default function Comment() {
             scriptEl.setAttribute(key, value)
         })
         commentRef.current.appendChild(scriptEl)
-
-
     },[])
     return (
         <div>
